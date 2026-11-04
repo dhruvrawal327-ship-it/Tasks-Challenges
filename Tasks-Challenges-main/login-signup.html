@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exotic Infotech - Portal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        
+        <div id="successToast" class="toast hidden">
+            <span class="toast-icon">✔️</span>
+            <span id="toastMessage">Success!</span>
+        </div>
+
+        <div class="card-container">
+            <div class="brand">
+                <span class="logo-icon">💻</span>
+                <span class="logo-name">Exotic Infotech</span>
+            </div>
+
+            <div class="tab-navigation">
+                <button id="tabLogin" class="tab-btn active" onclick="switchForm('login')">Login</button>
+                <button id="tabSignup" class="tab-btn" onclick="switchForm('signup')">Signup</button>
+            </div>
+
+            <div class="form-window">
+                <div id="formSlider" class="form-slider">
+
+                    
+                    <form id="loginForm" class="auth-form" onsubmit="handleFormSubmit(event, 'Welcome back! Login successful 🚀')">
+                        <div class="input-group">
+                            <label for="loginUser">Email or Username</label>
+                            <div class="input-wrapper">
+                                <span class="field-label-icon">👤</span>
+                                <input type="text" id="loginUser" placeholder="Enter Email OR Username" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="loginPassword">Password</label>
+                            <div class="input-wrapper">
+                                <span class="field-label-icon">🔒</span>
+                                <input type="password" id="loginPassword" placeholder="........" required>
+                                <button type="button" class="toggle-password-btn" onclick="togglePasswordVisibility('loginPassword' , this)">Show</button>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe">
+                                <span class="custom-checkbox"></span>
+                                Remember Me
+                            </label>
+                            <a href="#" class="forgot-link" onclick="alert('Password reset link sent to your registration email')">Forgot Password?</a>
+                        </div>
+
+                        <!-- FIXED: Added missing submit button back inside the login form layout -->
+                        <button type="submit" class="submit-btn">Login to Account</button>
+                    </form>
+
+                    
+                    <form id="signupForm" class="auth-form" onsubmit="handleSignupSubmit(event)">
+                        <div class="input-group">
+                            <label for="signupName">Fullname</label>
+                            <div class="input-wrapper">
+                                <span class="field-label-icon">📛</span>
+                                <input type="text" id="signupName" placeholder="Enter your Name" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signupEmail">Email Address</label>
+                            <div class="input-wrapper">
+                                <span class="field-label-icon">✉️</span>
+                                <input type="email" id="signupEmail" placeholder="name@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signupPassword">Password</label>
+                            <div class="input-wrapper">
+                                <span class="field-label-icon">🔒</span>
+                                <input type="password" id="signupPassword" placeholder="Minimum 6 characters" required minlength="6">
+                                <button type="button" class="toggle-password-btn" onclick="togglePasswordVisibility('signupPassword', this)">Show</button>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="signupConfirmPassword">Confirm Password</label>
+                            <div class="input-wrapper">
+                                <span class="field-label-icon">🛡️</span>
+                                <input type="password" id="signupConfirmPassword" placeholder="Repeat Password" required>
+                                <button type="button" class="toggle-password-btn" onclick="togglePasswordVisibility('signupConfirmPassword', this)">Show</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Create Free Account</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
+/* login & signup page*/
