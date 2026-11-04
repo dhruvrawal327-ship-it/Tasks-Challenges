@@ -1,51 +1,77 @@
-<!DOCTYPE html>
+<DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" width="width=device-width , initial-scale=1.0">
-        <title>Day-3 Semantic HTML Project</title>
-    <head>
-
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Classic Leather Shoes</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <body>
-
         <header>
-            <h1>My Internship Journey</h1>
+            <div class="logo">Shoe Zone</div>
             <nav>
-                
-                    <a href="#about">About Me</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                
-            </nav>
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#price">Price</a>
+                <a href="#contact">Contact</a>
+             </nav>
         </header>
 
         <main>
-
-            <section id="about">
-                <h2>About This Journey</h2>
-                <p>Welcome to my static webpage! Today is Day 3 of learning frontend development, focusing entirely on structuring content using clean, semantic tags.</p>
+            <section id="home" class="hero">
+                <h1>Classic Leather Shoes</h1>
+                <img src="images/shoes.jpg" alt="Red Sneakers">
+                <p>Comfortable,durable and perfect for everyday wear.Made with 100% natural leather.</p>
+                <a href="#price" class="buy-btn">Buy Now</a>
             </section>
 
-            <section id="skills">
-                <h2>Daily Insights</h2>
+            <section id="features" class="features">
+                <h2>Product Features</h2>
+                <ul>
+                    <li>Genuine Breathable Leather Exterior</li>
+                    <li>Soft cushioned innersole for all day comfort</li>
+                    <li>Anti-slip rubber grip outsole</li>
+                    <li>Lightweight design for running and walking</li>
+                </ul>
 
-                <article>
-                    <h3>Semantic Tags</h3>
-                    <p>Semantic tags give meaning to a webpage.They help SearchEngines(SEO) understand the content structure and make the website accesible to screen readers.</p>
-                </article>
+            </section>
 
-                <article>
-                    <h3>My goal for today</h3>
-                    <p>The main goal for today is to learn the semantic tags , their purpose , their uses and importance in building and laying out the structure.</p>
-                </article>
+            <section id="price" class="pricing">
+                <h2>Pricing Plan</h2>
+                <div class="price-box">
+                    <h3>Special offer</h3>
+                    <p class="amount">Rs6000</p>
+                    <p>Free delivery included within 3 days</p>
+                    <button class="order-btn" onclick="alert('Added to cart!')">Order Now</button>
+
+                </div>
+            </section>
+
+            <section id="contact" class="contact">
+                <h2>Contact Us</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <input type="text" placeholder="Enter Your Name" required>
+                    </div>
+
+                     <div class="form-group">
+                        <label>Email:</label>
+                        <input type="email" placeholder="Enter Your Email" required>
+                    </div>
+
+                     <div class="form-group">
+                        <label>Message:</label>
+                        <textarea rows="4" placeholder="Write your message here" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
             </section>
         </main>
 
-        <footer id="contact">
-            <h2>Contact Me</h2>
-            <p>&copy; 2026 Internship Journey. All Rights Reserved.</p>
-            <p id="contact">Contact: Student@Intern.com</p>
+        <footer>
+            <p>&copy; 2026 Shoe Shop Zone. All rights reserved.</p>
         </footer>
     </body>
-<html>
-    <!-- Day 3 Assignment Complete -->
+</html>
