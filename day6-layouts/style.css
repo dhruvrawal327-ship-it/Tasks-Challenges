@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+/* 1. FLEXBOX: Top Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e293b;
+  color: #ffffff;
+  padding: 16px 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+  transform: translateY(-2px);
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 20px 20px;
+}
+
+.header p {
+  color: #64748b;
+  margin-top: 8px;
+}
+
+/* 2. CSS GRID: Responsive 4-Card Container */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px 50px;
+}
+
+/* 3. Card Container */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #0284c7;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+/* FLEXBOX: Card Text Content */
+.card-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.tag {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* 4. FLEXBOX: Card Bottom Row */
+.card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.card-footer button {
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-footer button:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.35);
+}
+
+/* 5. FLEXBOX: Footer & About Us Section */
+.footer {
+  background-color: #1e293b;
+  color: #cbd5e1;
+  padding: 40px 32px 20px;
+  margin-top: 20px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #334155;
+}
+
+.about-section {
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-section h3,
+.contact-section h4 {
+  color: #ffffff;
+}
+
+.about-section p,
+.contact-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 20px;
+}
