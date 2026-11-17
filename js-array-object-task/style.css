@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 650px;
+  margin: auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.card {
+  flex: 1;
+  background: #eef2f5;
+  padding: 12px;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.card.pass { color: #155724; background: #d4edda; }
+.card.fail { color: #721c24; background: #f8d7da; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+.status-pass {
+  color: green;
+  font-weight: bold;
+}
+
+.status-fail {
+  color: red;
+  font-weight: bold;
+}
+
+/* Tablet & Small Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 12px;
+  }
+
+  .container {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Phones (max-width: 576px) */
+@media (max-width: 576px) {
+  /* Stack inputs and button vertically */
+  .form-group {
+    flex-direction: column;
+  }
+
+  .form-group input,
+  .form-group button {
+    width: 100%;
+  }
+
+  /* Stack summary cards vertically */
+  .summary {
+    flex-direction: column;
+  }
+
+  /* Adjust table padding & font size for smaller screens */
+  th,
+  td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+}
+
